@@ -1,4 +1,6 @@
-cd /usr/local/cuda-9.0/samples
+CUDA_VER=9.2
+
+cd /usr/local/cuda-$CUDA_VER/samples
 sudo make
 # the process above will take some time
 

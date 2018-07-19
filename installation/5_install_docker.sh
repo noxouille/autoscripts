@@ -1,9 +1,9 @@
 # First, remove any old version of Docker
-sudo apt-get remove docker docker-engine docker.io
+sudo apt-get remove -y docker docker-engine docker.io
 
 sudo apt-get update
 
-sudo apt-get install \
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -22,7 +22,7 @@ sudo add-apt-repository \
     stable"
 
 # update the apt package index and install Docker CE
-sudo apt-get update && sudo apt-get install docker-ce
+sudo apt-get update && sudo apt-get install -y docker-ce
 
 # test the hello-world docker container
 sudo docker run hello-world

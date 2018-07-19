@@ -14,7 +14,7 @@ if [ "$1" ]; then
 fi
 
 # install the driver
-sudo apt-get install nvidia-$NV_VER nvidia-modprobe
+sudo apt-get install -y nvidia-$NV_VER nvidia-modprobe
 
 # test the installation
 nvidia-smi

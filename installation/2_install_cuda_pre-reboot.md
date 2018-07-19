@@ -10,7 +10,7 @@ wget https://developer.nvidia.com/compute/cuda/$CUDA_VER/Prod/local_installers/$
 
 # extract the downloaded file
 chmod +x $CUDA_FILE
-./$CUDA_FILE --extract=$HOME
+./$CUDA_FILE --extract=$PWD
 
 # You should have unpacked three components:
 NV_DRIVER=NVIDIA-Linux-x86_64-396.26.run #(NVIDIA driver that we ignore),
@@ -27,7 +27,9 @@ sudo ./$CUDA_SAMPLES
 sudo bash -c "echo /usr/local/cuda/lib64/ > /etc/ld.so.conf.d/cuda.conf"
 sudo ldconfig
 
-sudo echo 'CUDA_PATH="/usr/local/cuda/bin"' >> /etc/environment
+sudo vim /etc/environment
+# then add :/usr/local/cuda/bin (including the ":") at the end of the PATH="/blah:/blah/blah" string.
+
 sudo reboot
 
 # continue at the post_reboot script
