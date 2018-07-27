@@ -2,5 +2,4 @@
 
 ## cuDNN
 
-Put your cuDNN file in the home directory and run the script.
-
+Put your cuDNN file in this directory and run the script.
