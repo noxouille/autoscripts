@@ -4,6 +4,9 @@ VER=18.07
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 
+# Remove these 2 test images we used before
+docker rmi nvidia/cuda:latest hello-world:latest
+
 # Download frameworks
 docker pull nvcr.io/nvidia/tensorflow:$VER-py3
 docker pull nvcr.io/nvidia/mxnet:$VER-py3
