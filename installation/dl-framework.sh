@@ -1,5 +1,10 @@
 VER=18.07
 
+# Stop and remove all Docker containers
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+# Download frameworks
 docker pull nvcr.io/nvidia/tensorflow:$VER-py3
 docker pull nvcr.io/nvidia/mxnet:$VER-py3
 docker pull nvcr.io/nvidia/caffe:$VER-py2
