@@ -15,3 +15,6 @@ docker pull nvcr.io/nvidia/caffe2:$VER-py3
 docker pull nvcr.io/nvidia/cntk:$VER-py3
 docker pull nvcr.io/nvidia/pytorch:$VER-py3
 docker pull nvcr.io/nvidia/digits:$VER
+
+# don't forget to logout
+docker logout nvcr.io
